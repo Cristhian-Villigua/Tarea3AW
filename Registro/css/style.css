@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #d3d3d3, #808080);
+}
+input{
+    font-family: 'Times New Roman', Times, serif;
+}
+.form{
+    margin: 120px auto;
+    padding: 3rem 1.5rem;
+    background-color: white;
+    width: min(680px, 80%);
+    height: 710px;
+    border-radius: 10px;
+    border: 3px solid blanchedalmond;
+    text-align: center;
+    box-shadow: lightcyan 2px 2px;
+}
+.form-title{
+    font-size: 2rem;
+}
+.form-inputs{
+    margin: 2rem 0 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    color: #6b6b6b;
+}
+.form-label{
+    width: 100%;
+    display: grid;
+    grid-template-areas: "input";
+}
+.form-input{
+    grid-area: input;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d7d0d0;
+    padding: .9rem 1.5rem;
+}
+.form-text{
+    grid-area: input;
+    z-index: 100;
+    width: max-content;
+    height: 100%;
+    margin-left: 1rem;
+    padding: 0 .5rem;
+
+    display: flex;
+    align-items: center;
+    transform-origin: left center;
+    transition: transform .3s;
+}
+.form-input:focus + .form-text, 
+.form-input:not(:placeholder-shown) + .form-text{
+    background-color: white;
+    transform: translateY(-50%) scale(.7);
+}
+.form-submit{
+    display: inline-block;
+    border-radius: 10px;
+    background-color: darkgray;
+    padding: .9rem 2.5rem;
+    border: 2px solid whitesmoke;
+    color: white;
+    font-size: 17px;
+}
+.form-submit:hover{
+    background-color: dimgrey;
+    cursor: pointer;
+}
